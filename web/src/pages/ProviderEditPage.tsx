@@ -231,6 +231,8 @@ function getClientSecretLabel(provider: any): Label {
       return label(i18next.t("provider:Secret key"), i18next.t("provider:Secret key - Tooltip"));
     } else if (["Lark", "Microsoft Teams", "WeCom"].includes(provider.type)) {
       return label(i18next.t("provider:Endpoint"), i18next.t("provider:Endpoint - Tooltip"));
+    } else if (provider.type === "Notifly") {
+      return label(i18next.t("provider:Api Key"), i18next.t("provider:Api Key - Tooltip"));
     }
     return label(i18next.t("provider:Client secret"), i18next.t("provider:Client secret - Tooltip"));
   } else if (provider.category === "ID Verification") {
@@ -313,6 +315,8 @@ function getAppIdLabel(provider: any): Label | null {
       return label(i18next.t("provider:App Key"), i18next.t("provider:App Key - Tooltip"));
     } else if (provider.type === "CUCloud") {
       return label("Topic name", "Topic name - Tooltip");
+    } else if (provider.type === "Notifly") {
+      return label(i18next.t("provider:Workflow"), i18next.t("provider:Workflow - Tooltip"));
     }
   }
   return null;
@@ -322,6 +326,8 @@ function getAppIdLabel(provider: any): Label | null {
 function getReceiverLabel(provider: any): Label | null {
   if (["Telegram", "Pushover", "Pushbullet", "Slack", "Discord", "Line", "Twitter", "Reddit", "Rocket Chat", "Viber"].includes(provider.type)) {
     return label(i18next.t("provider:Chat ID"), i18next.t("provider:Chat ID - Tooltip"));
+  } else if (provider.type === "Notifly") {
+    return label(i18next.t("provider:Subscriber ID"), i18next.t("provider:Subscriber ID - Tooltip"));
   } else if (["Custom HTTP", "Webpush", "Matrix"].includes(provider.type)) {
     return label(i18next.t("provider:Endpoint"), i18next.t("provider:Endpoint - Tooltip"));
   }
@@ -332,7 +338,7 @@ function hasClientIdRow(provider: any) {
   if ((provider.category === "Storage" && provider.type === "Google Cloud Storage") ||
       (provider.category === "Email" && ["Azure ACS", "SendGrid", "Resend"].includes(provider.type)) ||
       (provider.category === "Face ID" && provider.type === "Local UniFace") ||
-      (provider.category === "Notification" && ["Line", "Telegram", "Bark", "Discord", "Slack", "Pushbullet", "Pushover", "Lark", "Microsoft Teams", "WeCom"].includes(provider.type))) {
+      (provider.category === "Notification" && ["Line", "Telegram", "Bark", "Discord", "Slack", "Pushbullet", "Pushover", "Lark", "Microsoft Teams", "WeCom", "Notifly"].includes(provider.type))) {
     return false;
   }
   return true;

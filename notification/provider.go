@@ -57,6 +57,8 @@ func GetNotificationProvider(typ string, clientId string, clientSecret string, c
 		return NewCucloudProvider(clientId, clientSecret, appId, title, regionId, clientId2, metaData)
 	} else if typ == "WeCom" {
 		return NewWeComProvider(clientSecret)
+	} else if typ == "Notifly" {
+		return NewNotiflyProvider(clientSecret, appId, receiver)
 	}
 
 	return nil, nil

@@ -2111,6 +2111,8 @@
     "Subject - Tooltip": "Subject of email",
     "Subtype": "Subtype",
     "Subtype - Tooltip": "A more specific classification within the provider type, for example the specific OAuth or SMS provider variant",
+    "Subscriber ID": "Subscriber ID",
+    "Subscriber ID - Tooltip": "ID of the Notifly subscriber that receives the notification",
     "Syncer test": "Syncer test",
     "Syncer test - Tooltip": "Test the connectivity to the syncer",
     "Team ID": "Team ID",
@@ -2142,6 +2144,8 @@
     "UserInfo URL": "UserInfo URL",
     "UserInfo URL - Tooltip": "Custom OAuth UserInfo URL",
     "Web": "Web",
+    "Workflow": "Workflow",
+    "Workflow - Tooltip": "Trigger identifier of the Notifly workflow that sends the notification",
     "admin (Shared)": "admin (Shared)"
   },
   "radiusClient": {

@@ -675,6 +675,10 @@ export const OtherProviderInfo = {
       logo: `${StaticBaseUrl}/img/social_wecom.png`,
       url: "https://work.weixin.qq.com/",
     },
+    "Notifly": {
+      logo: `${StaticBaseUrl}/img/email_default.png`,
+      url: "https://notifly.io/",
+    },
   },
   "Face ID": {
     "Alibaba Cloud Facebody": {
@@ -1736,6 +1740,7 @@ export function getProviderTypeOptions(category) {
       {id: "Viber", name: "Viber"},
       {id: "CUCloud", name: "CUCloud"},
       {id: "WeCom", name: "WeCom"},
+      {id: "Notifly", name: "Notifly"},
       {id: "Plugin", name: "Plugin"},
     ]);
   } else if (category === "Face ID") {
